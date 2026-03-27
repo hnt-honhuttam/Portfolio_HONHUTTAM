@@ -1,0 +1,60 @@
+/* ========================================================
+   1. NỀN TỰ ĐỘNG ĐỔI MÀU (ANIMATED GRADIENT)
+======================================================== */
+.bg-animated {
+    background: linear-gradient(-45deg, #c2e9fb, #a1c4fd, #e0c3fc, #c2e9fb);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+}
+
+/* NỀN KHI CHUYỂN SANG DARK MODE */
+.dark .bg-animated {
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #334155, #0f172a);
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ========================================================
+   2. KHỐI KÍNH MỜ (ĐỒNG BỘ MÀU SẮC)
+======================================================== */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition: all 0.3s ease;
+}
+.dark .glass-nav {
+    background: rgba(15, 23, 42, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* KHỐI KÍNH MÀU TỐI CHO DARK MODE */
+.dark .glass-card {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* THANH PROGRESS TRÊN CÙNG */
+#scroll-progress {
+    transition: width 0.1s ease-out;
+}
+
+/* ẨN THANH CUỘN MẶC ĐỊNH */
+::-webkit-scrollbar { width: 0px; }
