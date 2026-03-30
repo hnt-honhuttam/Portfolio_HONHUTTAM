@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // 1. ALERT BOX CHÀO MỪNG
     if (!sessionStorage.getItem('daChaoHoi')) {
-        alert('Cảnh báo! Bạn đã bước vào vùng đất của Sinh viên IT chạy code bằng tâm linh. Nhấn OK để khám phá!');
+        alert('Chào mừng bạn đến với portfolio thật trên Internet của mình!);
         sessionStorage.setItem('daChaoHoi', 'true');
     }
 
